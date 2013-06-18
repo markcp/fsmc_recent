@@ -19,8 +19,11 @@ ActiveRecord::Schema.define(version: 20130617012947) do
   create_table "users", force: true do |t|
     t.string   "username"
     t.string   "password_digest"
+    t.string   "remember_token"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "users", ["password_digest"], name: "index_users_on_password_digest", using: :btree
 
 end

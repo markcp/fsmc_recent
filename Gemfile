@@ -18,6 +18,7 @@ group :test do
   gem 'selenium-webdriver', '2.0.0'
   gem 'capybara', '2.1.0'
   gem 'terminal-notifier-guard', '1.5.3'
+  gem 'factory_girl_rails'
 end
 
 gem 'sass-rails', '4.0.0.rc1'
