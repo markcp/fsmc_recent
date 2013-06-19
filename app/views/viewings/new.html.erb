@@ -1,0 +1,16 @@
+<% provide(:title, 'New viewing') %>
+<h1>New viewing</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= simple_form_for(@viewing) do |f| %>
+      <%= render 'shared/error_messages' %>
+      <%= f.input :movie_id %>
+      <%= f.input :date, as: :string %>
+      <%= f.input :format_id %>
+      <%= f.input :rating %>
+      <%= f.input :notes %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>

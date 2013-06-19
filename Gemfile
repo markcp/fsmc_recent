@@ -5,6 +5,7 @@ gem 'rails', '4.0.0.rc2'
 gem 'pg', '0.15.1'
 gem 'bootstrap-sass'
 gem 'bcrypt-ruby'
+gem 'simple_form'
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'

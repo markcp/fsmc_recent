@@ -162,6 +162,7 @@ GEM
       ffi (>= 1.0.7)
       json_pure
       rubyzip
+    simple_form (1.4.1)
     slop (3.4.5)
     spork (1.0.0rc3)
     sprockets (2.10.0)
@@ -210,6 +211,7 @@ DEPENDENCIES
   sass-rails (= 4.0.0.rc1)
   sdoc (= 0.3.20)
   selenium-webdriver (= 2.0.0)
+  simple_form
   spork-rails!
   terminal-notifier-guard (= 1.5.3)
   turbolinks (= 1.1.1)
