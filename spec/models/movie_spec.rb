@@ -17,6 +17,7 @@ describe Movie do
   it { should respond_to(:director) }
   it { should respond_to(:title_index) }
   it { should respond_to(:short) }
+  it { should respond_to(:viewings) }
 
   it { should be_valid }
 

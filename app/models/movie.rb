@@ -1,4 +1,7 @@
 class Movie < ActiveRecord::Base
+
+  has_many :viewings
+
   validates :title, presence: true
   validates :title_index, presence: true
   validates :director, presence: true
