@@ -33,6 +33,11 @@ describe Viewing do
     it { should_not be_valid }
   end
 
+  describe "when date is not date format" do
+    before { @viewing.date = "abc" }
+    it { should_not be_valid }
+  end
+
   describe "when rating is not numeric" do
     before { @viewing.rating = "a1" }
     it { should_not be_valid }

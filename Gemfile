@@ -6,6 +6,7 @@ gem 'pg', '0.15.1'
 gem 'bootstrap-sass'
 gem 'bcrypt-ruby'
 gem 'simple_form'
+gem 'validates_timeliness'
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
