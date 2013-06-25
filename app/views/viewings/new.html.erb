@@ -7,7 +7,7 @@
       <%= render 'shared/error_messages' %>
       <%= f.input :movie_id %>
       <%= f.input :date, as: :string %>
-      <%= f.input :format_id %>
+      <%= f.input :format_id, collection: Format.all %>
       <%= f.input :rating %>
       <%= f.input :notes %>
       <%= f.button :submit %>

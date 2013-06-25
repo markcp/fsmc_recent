@@ -4,6 +4,8 @@ describe "Viewing Pages" do
 
   subject { page }
 
+  before { @format = FactoryGirl.create(:format) }
+
   describe "new viewing page" do
     before { visit new_viewing_path }
 
@@ -34,7 +36,7 @@ describe "Viewing Pages" do
       before do
         fill_in "Movie", with: "1"
         fill_in "Date", with: "2013-07-04"
-        fill_in "Format", with: "1"
+        select  "Blu-ray", from: "Format"
         fill_in "Rating", with: "81"
         fill_in "Notes", with: "Example note"
       end

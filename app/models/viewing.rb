@@ -1,5 +1,7 @@
 class Viewing < ActiveRecord::Base
 
+  belongs_to :format
+
   validates :movie_id, presence: true
   validates :format_id, presence: true
   validates :date, presence: true

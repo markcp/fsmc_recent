@@ -5,9 +5,13 @@ FactoryGirl.define do
     password_confirmation "foobar"
   end
 
+  factory :format do
+    name "Blu-ray"
+  end
+
   factory :viewing do
     movie_id 1
-    format_id 1
+    format
     date Time.now
     rating 81
     notes "Example note."

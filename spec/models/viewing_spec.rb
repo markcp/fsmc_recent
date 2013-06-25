@@ -2,11 +2,11 @@ require 'spec_helper'
 
 describe Viewing do
 
-  before { @viewing = Viewing.new(movie_id: 1,
-                                  date: '2013-06-18',
-                                  format_id: 1,
-                                  rating: 80,
-                                  notes: 'Example note.') }
+  let(:format) { FactoryGirl.create(:format) }
+  before { @viewing = format.viewings.build(movie_id: 1,
+                                            date: '2013-06-18',
+                                            rating: 80,
+                                            notes: 'Example note.') }
 
   subject { @viewing }
 
@@ -15,6 +15,8 @@ describe Viewing do
   it { should respond_to(:format_id) }
   it { should respond_to(:rating) }
   it { should respond_to(:notes) }
+  it { should respond_to(:format) }
+  its(:format) { should eq format }
 
   describe "when movie_id is not present" do
     before { @viewing.movie_id = nil }

@@ -4,6 +4,7 @@ class ViewingsController < ApplicationController
 
   def new
     @viewing = Viewing.new
+    @formats = Format.all
   end
 
   def create
