@@ -5,6 +5,7 @@ class ViewingsController < ApplicationController
   def new
     @viewing = Viewing.new
     @formats = Format.all
+    @viewing.build_movie
   end
 
   def create
@@ -30,6 +31,6 @@ class ViewingsController < ApplicationController
 
     def viewing_params
       params.require(:viewing).permit(:movie_id, :date, :format_id,
-                                   :rating, :notes)
+                                   :rating, :notes, movie_attributes: [ :id, :title, :year, :skandies_year, :director, :short ])
     end
 end

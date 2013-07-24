@@ -5,9 +5,15 @@
   <div class="span6 offset3">
     <%= simple_form_for(@viewing) do |f| %>
       <%= render 'shared/error_messages' %>
-      <%= f.input :movie_id %>
+      <%= f.simple_fields_for :movie do |m| %>
+        <%= m.input :title %>
+        <%= m.input :director %>
+        <%= m.input :year %>
+        <%= m.input :skandies_year %>
+        <%= m.input :short %>
+      <% end %>
       <%= f.input :date, as: :string %>
-      <%= f.input :format_id, collection: Format.all %>
+      <%= f.association :format %>
       <%= f.input :rating %>
       <%= f.input :notes %>
       <%= f.button :submit %>

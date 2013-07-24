@@ -5,6 +5,7 @@ describe "Viewing Pages" do
   subject { page }
 
   before { @format = FactoryGirl.create(:format) }
+  before { @movie = FactoryGirl.create(:movie) }
 
   describe "new viewing page" do
     before { visit new_viewing_path }

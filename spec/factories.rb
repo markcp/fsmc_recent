@@ -9,6 +9,15 @@ FactoryGirl.define do
     name "Blu-ray"
   end
 
+  factory :movie do
+    title "The Loneliest Planet"
+    title_index "Loneliest Planet, The"
+    year "2011"
+    skandies_year "2012"
+    director "Julia Loktev"
+    short false
+  end
+
   factory :viewing do
     movie_id 1
     format

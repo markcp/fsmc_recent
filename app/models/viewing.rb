@@ -2,8 +2,9 @@ class Viewing < ActiveRecord::Base
 
   belongs_to :format
   belongs_to :movie
+  accepts_nested_attributes_for :movie
 
-  validates :movie_id, presence: true
+  validates :movie, presence: true
   validates :format_id, presence: true
   validates :date, presence: true
   validates :rating, numericality: { only_integer: true,
